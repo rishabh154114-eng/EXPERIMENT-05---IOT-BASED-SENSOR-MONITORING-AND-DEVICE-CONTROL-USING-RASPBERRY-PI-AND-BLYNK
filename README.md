@@ -109,6 +109,9 @@ o	Switch the relay ON or OFF.
 ---
 
 ## **CIRCUIT DIAGRAM:**  
+<img width="1204" height="1600" alt="image" src="https://github.com/user-attachments/assets/6b033889-3f06-4faf-ad7f-cf408dc0b5c4" />
+
+
 ### **Connections:**  
 ### **GPIO Pin Connection Table:** 
 |  Device  | 	Raspberry Pi GPIO Pin	  |  Purpose
@@ -226,13 +229,12 @@ while True:
 
 
 ### FIGURE -08 Relay On Image
-<img width="1536" height="1536" alt="image" src="https://github.com/user-attachments/assets/1283d450-f85f-41d2-a2fc-5369b1b1c4bb" />
-
+<img width="1204" height="1600" alt="image" src="https://github.com/user-attachments/assets/5e435f2f-b8f4-4fab-adfe-70b653868285" />
 ### FIGURE -09 LED On Image
-<img width="1536" height="1536" alt="image" src="https://github.com/user-attachments/assets/2e7d6bf1-89ac-4d80-abd3-28d6d966d219" />
+<img width="1204" height="1600" alt="image" src="https://github.com/user-attachments/assets/a2aee79a-bdef-454b-96f5-a2de9da6552f" />
 
 ### FIGURE -10 Buzzer On Image
-<img width="1536" height="1536" alt="image" src="https://github.com/user-attachments/assets/2e37b64a-72ba-4fe9-9921-1f849cc6ab8b" />
+<img width="1204" height="1600" alt="image" src="https://github.com/user-attachments/assets/fb6e4cab-3374-4ae5-b0cc-9503714201de" />
 
 ### FIGURE -11 Blynk App Screenshot for IR Sensor
 <img width="728" height="1600" alt="image" src="https://github.com/user-attachments/assets/ea64ab09-19df-4a9e-9b28-c6bb872e98cb" />
