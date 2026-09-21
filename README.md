@@ -137,7 +137,7 @@ import BlynkLib
 import time
 
 # Blynk Authentication Token
-BLYNK_AUTH = 'Your_Blynk_Auth_Token'
+BLYNK_AUTH = 'QruU2au0D9tWh88jo3Yjwk2seWdoLLYz'
 
 # Initialize Blynk
 blynk = BlynkLib.Blynk(BLYNK_AUTH)
@@ -204,79 +204,7 @@ while True:
 ...
 ```
 ---
-## **Modified Python Code for Raspberry Pi + Blynk**  
-```
-import RPi.GPIO as GPIO
-import BlynkLib
-import time
 
-# Blynk Authentication Token
-BLYNK_AUTH = 'fl5MkIyvkYWqNRJn76TkAHPrwNRond8l'
-# Initialize Blynk
-blynk = BlynkLib.Blynk(BLYNK_AUTH)
-
-# GPIO Setup
-GPIO.setmode(GPIO.BCM)
-
-# Sensor Pins
-IR_PIN = 23
-LDR_PIN = 24
-# Output Pins
-RELAY = 18
-LED = 25
-BUZZER = 17
-
-GPIO.setup(IR_PIN, GPIO.IN)
-GPIO.setup(LDR_PIN, GPIO.IN)
-
-GPIO.setup(RELAY, GPIO.OUT)
-GPIO.setup(LED, GPIO.OUT)
-GPIO.setup(BUZZER, GPIO.OUT)
-
-GPIO.output(RELAY, 0)
-GPIO.output(LED, 0)
-GPIO.output(BUZZER, 0)
-# Blynk Control for Relay
-@blynk.on("V2")
-def relay_control(value):
-    if int(value[0]) == 1:
-        GPIO.output(RELAY, 1)
-    else:
-        GPIO.output(RELAY, 0)
-
-# Blynk Control for LED
-@blynk.on("V3")
-def led_control(value):
-    if int(value[0]) == 1:
-        GPIO.output(LED, 1)
-    else:
-        GPIO.output(LED, 0)
-# Blynk Control for Buzzer
-@blynk.on("V4")
-def buzzer_control(value):
-    if int(value[0]) == 1:
-        GPIO.output(BUZZER, 1)
-    else:
-        GPIO.output(BUZZER, 0)
-while True:
-    blynk.run()
-
-    ir_value = GPIO.input(IR_PIN)
-    ldr_value = GPIO.input(LDR_PIN)
-
-    # Send sensor values to Blynk
-    blynk.virtual_write(0, ir_value)
-    blynk.virtual_write(1, ldr_value)
-
-    time.sleep(1)
-
-
-
-
-
-```
-
----
 ## **Expected Output (Blynk App Interface)**
 ### **Learners should capture screenshots of the Blynk mobile application showing the following widgets:**
 ### **Screen 1 – Sensor Monitoring**
